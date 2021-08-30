@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-top: 1rem;
+    border: 1px solid black;
+}
+
+.logo {
+    
+}
+
+.navegacao {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.navegacao a{
+    padding: 40px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards {
+    margin-top: 1rem;
+    width: 95vw;
+    height: 80vh;
+    max-width: 1440px;
+    border: 1px solid black;
+ }
