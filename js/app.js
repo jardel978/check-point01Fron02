@@ -15,27 +15,17 @@ btn.addEventListener('click', (e) => {
         <div class="conteudo-card">
             <!-- título -->
             <div>
-                <div class="icone-paragrafro">
-                    <img src="" alt="imagem-icon">
-                </div>
+
                 <p>${form.titulo.value}</p>
             </div>
 
             <!-- descrição -->
             <div class="icone-paragrafro">
-                <div>
-                    <img src="" alt="imagem-icon">
-                </div>
+
                 <p>${form.descricao.value}</p>
             </div>
 
-            <!-- url -->
-            <div class="icone-paragrafro">
-                <div>
-                    <img src="" alt="imagem-icon">
-                </div>
-               
-            </div>
+
         </div>
     `
     form.titulo.value = "";
