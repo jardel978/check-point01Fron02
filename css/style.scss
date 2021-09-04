@@ -4,21 +4,22 @@
     box-sizing: border-box;
 }
 
+.general__container {
+    min-height: 87.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top__container {
+    flex: 1;
+}
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    padding-top: 1rem;
     border: 1px solid black;
-}
-
-.logo {
-    
-}
-
-body {
-    background-color: #0D0C16;
 }
 
 .navegacao {
@@ -26,8 +27,22 @@ body {
     flex-flow: row wrap;
     
     a{
-        padding: 40px;
+        padding: 20px;
         text-decoration: none;
+    }
+}
+
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+
+    h1 {
+        margin-bottom: 10px;
     }
 }
 
@@ -38,61 +53,71 @@ body {
     flex-direction: column;
 }
 
-.formulario {//ideia: colocar o forms flutuando até acontecer um onmouseover
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 300px;
-    border: 1px solid white;
-    margin-top: 1rem;
-    border-radius: 10px;
-    height: 350px;
 
-    input {
-        width: 280px;
-        height: 40px;
-        margin: 15px;
-        border-radius: 10px;
-        // border: none;
-    }
-    
-    button {
-        margin-top: 20px;
-        width: 250px;
-        height: 40px;
-        border-radius: 10px;
-    }
-}
-
-.cards {
+.section__cards {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     margin-top: 1rem;
     width: 95vw;
+    margin: 0 auto;
     max-width: 1440px;
-    border: 1px solid white;
-    color: white;
-    
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
     article {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border: 1px solid white;
+        border: 1px solid black;
         width: 300px;
-        // height: 350px;
+        height: 300px;
         border-radius: 10px;
         margin-top: 1rem;
         margin: 10px;
     }
     
     p {
-        border: 1px solid white;
+        border-bottom: 1px solid black;
         border-radius: 10px;
+        margin: 20px;
+        padding: 10px;
     }
 }
+
+// .section__card__lixeira {
+//     align-self: flex-end;
+//     width: 80px;
+//     height: 80px;
+//     padding: 10px;
+
+//     &:hover {
+//         transform: scale(1.1);
+//         transition: ease 0.3s;
+//         cursor: pointer;
+//     }
+// }
+
+// .section__card__lixeira__img1 {
+//     position: absolute;
+//     width: 30px;
+//     &:hover {
+//         margin-bottom: 3px;
+//         transition: ease 0.3s;
+//         cursor: pointer;
+//     }
+// }
+
+// .section__card__lixeira__img2 {
+//     position: absolute;
+//     width: 30px;
+//     &:hover {
+//         margin-top: 3px;
+//         transition: ease 0.3s;
+//         cursor: pointer;
+//     }
+// }
 
 .imagem-card {
     width: 200px;
@@ -101,5 +126,82 @@ body {
 
 .conteudo-card {
     width: 280px;
-    // height: 150px;
+}
+
+.section__paragrafro {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.btn-abrir-form {
+    box-sizing: border-box;
+    margin: 0;
+    width: 60px;
+    height: 84px;
+    position: fixed;
+    bottom: 10px;
+    right: -2px;
+    // background: url("https://widget-api.eggeducacion.app/btn-dh.png") center center no-repeat;
+    cursor: pointer;
+    animation: go-back 0.7s infinite alternate;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+    &:hover {
+        p {
+            color: rgb(11, 12, 37);
+            // transform: scale(1.1);
+            transition: ease-in 0.3s;
+        }
+    }   
+    
+    img {
+        width: 60px;
+        animation: girar 1s linear infinite;
+        border-radius: 100%;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    border: 1px solid black;
+    padding: 17px;
+    margin-bottom: 0;
+}
+
+//animações
+@keyframes go-back {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(0.9); }
+  }
+@keyframes girar {
+    from {
+      transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg) };
+  }
+
+//media query
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+    .general__container {
+        min-height: 92vh;
+        display: flex;
+        flex-direction: column;
+    } 
+}
+@media (min-width: 1024px) {
+
+    .general__container {
+        min-height: 94vh;
+        display: flex;
+        flex-direction: column;
+    }  
 }

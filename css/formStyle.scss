@@ -1,0 +1,44 @@
+
+.container__form {
+    position: fixed;
+    right: 0px;
+    bottom: 90px;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid black;
+    margin-top: 1rem;
+    border-radius: 10px;
+    height: 350px;
+    transform: translateX(120%);
+    z-index: 999;
+    input {
+        width: 280px;
+        height: 40px;
+        margin: 15px;
+        border-radius: 10px;
+        // border: none;
+    }
+    
+
+    .container__form__btn-enviar {
+        margin-top: 20px;
+        width: 250px;
+        height: 40px;
+        border-radius: 10px;
+    }
+}
+
+//animações:
+@keyframes mostrar-form {
+    0%  {transform: translateX(120%); }
+    100%  {transform: translateX(0%); }
+}
+@keyframes remover-form {
+    0%  {transform:translateX(0%); }
+    100%  {transform: translateX(120%); }
+}
+
