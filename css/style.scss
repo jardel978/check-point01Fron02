@@ -85,39 +85,62 @@ main {
         padding: 10px;
     }
 }
+.section__card__lixeira--disable {
+    opacity: 0.5;
+    align-self: flex-end;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    &:hover {
+        animation: lixeira  0.1s ease;
+        animation-iteration-count: 1;
+        cursor: not-allowed;
+        
+        & img {
+            border: 2.5px solid red;
+            border-radius: 100%;
+            padding: 1px;
+        }
+    }
+}
 
-// .section__card__lixeira {
-//     align-self: flex-end;
-//     width: 80px;
-//     height: 80px;
-//     padding: 10px;
+.section__card__lixeira__img--disable {
+    position: absolute;
+    width: 30px;
+}
 
-//     &:hover {
-//         transform: scale(1.1);
-//         transition: ease 0.3s;
-//         cursor: pointer;
-//     }
-// }
+.section__card__lixeira {
+    align-self: flex-end;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
 
-// .section__card__lixeira__img1 {
-//     position: absolute;
-//     width: 30px;
-//     &:hover {
-//         margin-bottom: 3px;
-//         transition: ease 0.3s;
-//         cursor: pointer;
-//     }
-// }
+    &:hover {
+        transform: scale(1.1);
+        transition: ease 0.3s;
+        cursor: pointer;
+    }
+}
 
-// .section__card__lixeira__img2 {
-//     position: absolute;
-//     width: 30px;
-//     &:hover {
-//         margin-top: 3px;
-//         transition: ease 0.3s;
-//         cursor: pointer;
-//     }
-// }
+.section__card__lixeira__img1 {
+    position: absolute;
+    width: 30px;
+    &:hover {
+        margin-bottom: 3px;
+        transition: ease 0.3s;
+        cursor: pointer;
+    }
+}
+
+.section__card__lixeira__img2 {
+    position: absolute;
+    width: 30px;
+    &:hover {
+        margin-top: 3px;
+        transition: ease 0.3s;
+        cursor: pointer;
+    }
+}
 
 .imagem-card {
     width: 200px;
@@ -128,7 +151,12 @@ main {
     width: 280px;
 }
 
-.section__paragrafro {
+.section__card__box__paragrafo {
+    overflow: auto;
+    height: 200px;
+}
+
+.section__paragrafo {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -142,7 +170,6 @@ main {
     position: fixed;
     bottom: 10px;
     right: -2px;
-    // background: url("https://widget-api.eggeducacion.app/btn-dh.png") center center no-repeat;
     cursor: pointer;
     animation: go-back 0.7s infinite alternate;
     text-align: center;
@@ -151,14 +178,14 @@ main {
     &:hover {
         p {
             color: rgb(11, 12, 37);
-            // transform: scale(1.1);
+            transform: scale(1.1);
             transition: ease-in 0.3s;
         }
     }   
     
     img {
         width: 60px;
-        animation: girar 1s linear infinite;
+        animation: girar 0.5s linear infinite;
         border-radius: 100%;
     }
 }
@@ -186,6 +213,27 @@ footer {
     to {
         transform: rotate(360deg) };
   }
+ 
+  @keyframes lixeira {
+    0% {
+        // transform: scale(0.9);
+        transform: translateX(0);
+    }; 
+    25% {transform: translateX(5px);}
+
+    50% {
+        // transform:  scale(1);
+        transform: translateX(0);
+    }; 
+    75% {
+        // transform:  scale(0.9);
+        transform: translateX(-5px);
+    }; 
+    100% {
+        // transform:  scale(1);
+        transform: translateX(0);
+    }; 
+}
 
 //media query
 
