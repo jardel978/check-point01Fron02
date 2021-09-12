@@ -18,8 +18,6 @@ for (objCard of meusCards) {//leitura de itens no localStorage
 
 const lixeiras = document.querySelectorAll('[data-click]');
 lixeiras.forEach(el => el.addEventListener("click", (e) => {//para excluir cards
-    e.preventDefault();
-    popup.style.display = "none";
     let idLixeira = parseInt(el.id);//pegando o número do id que é o mesmo numero do index do card no array meusCards
     let indexCard = indexCards.indexOf(idLixeira);
     console.log(indexCard);
@@ -29,7 +27,10 @@ lixeiras.forEach(el => el.addEventListener("click", (e) => {//para excluir cards
         meusCards.splice(indexCard, 1);
         indexCards.splice(indexCard, 1);//removendo um elemento do indexCards para manter o sincronismo com o index de meusCards
         location.reload();
-    }
+
+    } else
+        e.stopPropagation();
+
     localStorage.setItem('meusCards', JSON.stringify(meusCards));//atualização do localStorage
     localStorage.setItem('idsCards', JSON.stringify(indexCards));//atualização do localStorage
 }))

@@ -5,6 +5,18 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "vellocette";
+  src: url("../fonts/Velocette.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  letter-spacing: 1.5px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
 .background {
   height: auto;
   overflow: hidden;
@@ -70,7 +82,7 @@ header {
   padding: 20px;
   text-decoration: none;
   margin-left: 40px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .navegacao a:hover {
@@ -98,7 +110,12 @@ main {
 }
 
 main h1 {
+  color: #dae1e9;
+  font-size: 70px;
   margin-bottom: 10px;
+  font-family: 'vellocette';
+  text-shadow: 2px 4px 3px rgba(18, 27, 30, 0.62);
+  letter-spacing: 7px;
 }
 
 .container {
@@ -133,7 +150,6 @@ main h1 {
   width: 95vw;
   margin: 0 auto;
   max-width: 1440px;
-  border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
 }
@@ -154,14 +170,14 @@ main h1 {
           flex-direction: column;
   background-color: rgba(0, 0, 0, 0.555);
   width: 300px;
-  height: 320px;
+  height: 350px;
   border-radius: 7px;
   margin-top: 1rem;
   margin: 10px;
   -webkit-box-shadow: 3px 6px 15px 1px #0c77ba8c;
           box-shadow: 3px 6px 15px 1px #0c77ba8c;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .section__cards article:hover {
@@ -170,6 +186,8 @@ main h1 {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   cursor: pointer;
+  -webkit-animation: card-neon 1s ease-in-out infinite alternate;
+          animation: card-neon 1s ease-in-out infinite alternate;
 }
 
 .section__cards article img {
@@ -202,9 +220,9 @@ main h1 {
   position: absolute;
   width: 30px;
   opacity: 0.4;
-  background-color: rgba(162, 163, 163, 0.651);
+  background-color: rgba(162, 163, 163, 0.514);
   padding: 2px;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .section__card__lixeira {
@@ -212,7 +230,7 @@ main h1 {
       align-self: flex-end;
   width: 80px;
   height: 80px;
-  padding: 10px;
+  padding: 7px;
 }
 
 .section__card__lixeira:hover {
@@ -226,7 +244,7 @@ main h1 {
 .section__card__lixeira__img1 {
   position: absolute;
   width: 30px;
-  background-color: aliceblue;
+  background-color: rgba(255, 85, 99, 0.719);
   padding: 2px;
 }
 
@@ -251,8 +269,10 @@ main h1 {
 }
 
 .imagem-card {
-  width: 200px;
-  height: 150px;
+  max-width: 220px;
+  max-height: 170px;
+  width: auto;
+  height: auto;
 }
 
 .conteudo-card {
@@ -262,6 +282,25 @@ main h1 {
 .section__card__box__paragrafo {
   overflow: auto;
   height: 200px;
+}
+
+.section__card__box__paragrafo::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.section__card__box__paragrafo::-webkit-scrollbar-thumb {
+  background: linear-gradient(122deg, #005991 34%, #42B7FF 77%);
+  border: 2.7px outset #024B78;
+  border-radius: 24px;
+}
+
+.section__card__box__paragrafo::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(150deg, #6472DB 20%, #20AEE6 43%);
+}
+
+.section__card__box__paragrafo::-webkit-scrollbar-track {
+  border-radius: 30px;
 }
 
 .section__paragrafo {
@@ -285,20 +324,19 @@ main h1 {
   text-align: center;
   font-weight: bold;
   z-index: 1000;
+  color: #c5c6e2;
 }
 
 .btn-abrir-form:hover p {
-  color: #0b0c25;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  color: #fdfdfd;
   -webkit-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
 }
 
 .btn-abrir-form img {
   width: 60px;
-  -webkit-animation: girar 0.5s linear infinite;
-          animation: girar 0.5s linear infinite;
+  -webkit-animation: girar 1.5s linear infinite;
+          animation: girar 1.5s linear infinite;
   border-radius: 100%;
 }
 
@@ -412,6 +450,17 @@ footer a:hover {
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes card-neon {
+  from {
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+            box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
   }
 }
 /*# sourceMappingURL=style.css.map */

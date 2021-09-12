@@ -1,7 +1,20 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "vellocette";
+    src: url('../fonts/Velocette.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    letter-spacing: 1.5px;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .background {
@@ -36,7 +49,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    // border: 1px solid black;
 }
 
 .navegacao {
@@ -48,14 +60,12 @@ header {
         padding: 20px;
         text-decoration: none;
         margin-left: 40px;
-        font-size: 20px;
-
+        font-size: 25px;
         &:hover {
             background-color: #122a388c;
             border-radius: 7px;
             transform: scale(1.5);
             transition: 0.2s ease;
-            // border-bottom: #3A3B3B 1px solid; 
         }
     }
 }
@@ -68,7 +78,12 @@ main {
     margin-top: 30px;
 
     h1 {
+        color: rgb(218, 225, 233);
+        font-size: 70px;
         margin-bottom: 10px;
+        font-family: 'vellocette';
+        text-shadow: 2px 4px 3px rgba(18,27,30,0.62);
+        letter-spacing: 7px;
     }
 }
 
@@ -89,9 +104,9 @@ main {
     width: 95vw;
     margin: 0 auto;
     max-width: 1440px;
-    border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
+
     article {
         display: flex;
         justify-content: center;
@@ -99,18 +114,19 @@ main {
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.555);
         width: 300px;
-        height: 320px;
+        height: 350px;
         border-radius: 7px;
         margin-top: 1rem;
         margin: 10px;       
         box-shadow: 3px 6px 15px 1px #0c77ba8c;
         color: aliceblue;
-        font-size: 20px;
-        
+        font-size: 23px;
+
         &:hover {
             transform: scale(1.05);
             transition: 0.2s ease;
             cursor: pointer;
+            animation: card-neon 1s ease-in-out infinite alternate;
         }
 
         img {
@@ -118,6 +134,7 @@ main {
         }
     }
     
+
     p {
         border-bottom: 1px solid #0C78BA;
         border-radius: 10px;
@@ -141,16 +158,16 @@ main {
     position: absolute;
     width: 30px;
     opacity: 0.4;
-    background-color: rgba(162, 163, 163, 0.651);
+    background-color: rgba(162, 163, 163, 0.514);
     padding: 2px;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .section__card__lixeira {
     align-self: flex-end;
     width: 80px;
     height: 80px;
-    padding: 10px;
+    padding: 7px;
 
     &:hover {
         transform: scale(1.1);
@@ -162,7 +179,7 @@ main {
 .section__card__lixeira__img1 {
     position: absolute;
     width: 30px;
-    background-color: aliceblue;
+    background-color: rgba(255, 85, 99, 0.719);
     padding: 2px;
     &:hover {
         margin-bottom: 3px;
@@ -183,8 +200,10 @@ main {
 }
 
 .imagem-card {
-    width: 200px;
-    height: 150px;
+    max-width: 220px;
+    max-height:170px;
+    width: auto;
+    height: auto;
 }
 
 .conteudo-card {
@@ -194,6 +213,21 @@ main {
 .section__card__box__paragrafo {
     overflow: auto;
     height: 200px;
+    &::-webkit-scrollbar{
+        width: 7px;
+        height: 7px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: linear-gradient(122deg, #005991 34%,#42B7FF 77%);
+        border: 2.7px outset #024B78;
+        border-radius: 24px;
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        background: linear-gradient(150deg, #6472DB 20%,#20AEE6 43%);
+    }
+    &::-webkit-scrollbar-track{
+        border-radius: 30px;
+    }
 }
 
 .section__paragrafo {
@@ -215,17 +249,17 @@ main {
     text-align: center;
     font-weight: bold;
     z-index: 1000;
+    color: rgb(197, 198, 226);
     &:hover {
         p {
-            color: rgb(11, 12, 37);
-            transform: scale(1.1);
+            color: rgb(253, 253, 253);
             transition: ease-in 0.3s;
         }
     }   
     
     img {
         width: 60px;
-        animation: girar 0.5s linear infinite;
+        animation: girar 1.5s linear infinite;
         border-radius: 100%;
     }
 }
@@ -263,48 +297,25 @@ footer {
   
 @keyframes girar {
     from {
-      transform: rotate(0);
+        transform: rotate(0);
     }
     to {
         transform: rotate(360deg) };
-  }
+}
  
   @keyframes lixeira {
-    0% {
-        // transform: scale(0.9);
-        transform: translateX(0);
-    }; 
+    0% {transform: translateX(0);} 
     25% {transform: translateX(5px);}
-
-    50% {
-        // transform:  scale(1);
-        transform: translateX(0);
-    }; 
-    75% {
-        // transform:  scale(0.9);
-        transform: translateX(-5px);
-    }; 
-    100% {
-        // transform:  scale(1);
-        transform: translateX(0);
-    }; 
+    50% {transform: translateX(0);} 
+    75% {transform: translateX(-5px);} 
+    100% {transform: translateX(0);} 
 }
 
-//media query
-
-// @media (min-width: 768px) and (max-width: 1023px){
-
-//     .general__container {
-//         height: 100vh;
-//         display: flex;
-//         flex-direction: column;
-//     } 
-// }
-// @media (min-width: 1024px) {
-
-//     .general__container {
-//         min-height: 94vh;
-//         display: flex;
-//         flex-direction: column;
-//     }  
-// }
+@-webkit-keyframes card-neon {
+  from {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+  }
+  to {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+  }
+}
