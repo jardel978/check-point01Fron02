@@ -14,8 +14,11 @@
 </head>
 
 <body>
+    <div class="background">
+        <video src="./midias/6 CARROS MAIS CAROS DO MUNDO_720P HD.mp4 (00;00;00;00 - 00;00;10;01)[2].mp4" autoplay="true" loop="true"></video>
+        <!-- <video src="./midias/Into without text 3d download link without copyright 1 car intro_720P HD.mp4" autoplay="true" loop="true"></video> -->
+    </div>
     <div class="general__container">
-
         <div id="pop-up" class="pop-up"></div>
         <div class="top__container">
             <header>
@@ -39,7 +42,7 @@
                         <div>
                             <input type="text" name="urlImgCard" id="url-img-card" placeholder="URL">
                         </div>
-                        <button id="criar-card" class="container__form__btn-enviar">Enviar</button>
+                        <button id="criar-card" class="container__form__btn-enviar" name="btnEnviar">Enviar</button>
                     </form>
                 </div>
                 <!-- btn abrir form -->
@@ -53,7 +56,7 @@
                 <section id="secao-cards" class="section__cards">
 
                     <article class="section__card  card__fixo-1">
-                        <div class="section__card__lixeira--disable">
+                        <div data-edit class="section__card__lixeira--disable">
                             <input type="image" value="0" class="section__card__lixeira__img--disable"
                                 src="./midias/lixeira-de-reciclagem-tampa.png" alt="">
                             <input type="image" value="0" class="section__card__lixeira__img--disable"
@@ -80,7 +83,7 @@
                         </div>
                     </article>
                     <article class="section__card  card__fixo-2">
-                        <div class="section__card__lixeira--disable">
+                        <div data-edit class="section__card__lixeira--disable">
                             <input type="image" value="1" class="section__card__lixeira__img--disable"
                                 src="./midias/lixeira-de-reciclagem-tampa.png" alt="">
                             <input type="image" value="1" class="section__card__lixeira__img--disable"

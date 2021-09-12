@@ -64,9 +64,9 @@ function criarCard(titulo, descricao, link, id) {
 
 const criarObj = () => {//função que cria obj com informações do card gerado para armazenar no localStorage
     let obj = {};
-    obj.titulo = form.titulo.value
-    obj.descricao = form.descricao.value
-    obj.urlImgCard = form.urlImgCard.value
+    obj.titulo = form.titulo.value;
+    obj.descricao = form.descricao.value;
+    obj.urlImgCard = form.urlImgCard.value;
     obj.idCard = idGenerator();
     return obj;
 }
@@ -92,8 +92,8 @@ btn.addEventListener('click', (e) => {//evento de click que cria um card
     e.preventDefault();
 
     if (form.titulo.value === '' || form.urlImgCard.value === '') {//alerta de campos vazios
-        alert("Os campos de título e url não podem estar vazios!")
-        return
+        alert("Os campos de título e url não podem estar vazios!");
+        return;
     }
     let objCard = criarObj();
     let novoArtigo = criarCard(objCard.titulo, objCard.descricao, objCard.urlImgCard, objCard.idCard);

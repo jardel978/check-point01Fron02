@@ -5,6 +5,22 @@
           box-sizing: border-box;
 }
 
+.background {
+  height: auto;
+  overflow: hidden;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
 .general__container {
   min-width: 320px;
   height: 100vh;
@@ -37,7 +53,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  border: 1px solid black;
 }
 
 .navegacao {
@@ -51,8 +66,20 @@ header {
 }
 
 .navegacao a {
+  color: aliceblue;
   padding: 20px;
   text-decoration: none;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.navegacao a:hover {
+  background-color: #122a388c;
+  border-radius: 7px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 main {
@@ -94,6 +121,7 @@ main h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: rgba(0, 0, 0, 0.651);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -124,12 +152,24 @@ main h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.555);
   width: 300px;
-  height: 300px;
-  border-radius: 10px;
+  height: 320px;
+  border-radius: 7px;
   margin-top: 1rem;
   margin: 10px;
+  -webkit-box-shadow: 3px 6px 15px 1px #0c77ba8c;
+          box-shadow: 3px 6px 15px 1px #0c77ba8c;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.section__cards article:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  cursor: pointer;
 }
 
 .section__cards article img {
@@ -137,14 +177,13 @@ main h1 {
 }
 
 .section__cards p {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0C78BA;
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
 }
 
 .section__card__lixeira--disable {
-  opacity: 0.5;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 80px;
@@ -162,6 +201,10 @@ main h1 {
 .section__card__lixeira__img--disable {
   position: absolute;
   width: 30px;
+  opacity: 0.4;
+  background-color: rgba(162, 163, 163, 0.651);
+  padding: 2px;
+  border-radius: 10px;
 }
 
 .section__card__lixeira {
@@ -183,6 +226,8 @@ main h1 {
 .section__card__lixeira__img1 {
   position: absolute;
   width: 30px;
+  background-color: aliceblue;
+  padding: 2px;
 }
 
 .section__card__lixeira__img1:hover {
@@ -195,6 +240,7 @@ main h1 {
 .section__card__lixeira__img2 {
   position: absolute;
   width: 30px;
+  padding: 2px;
 }
 
 .section__card__lixeira__img2:hover {
@@ -259,15 +305,24 @@ main h1 {
 footer {
   text-align: center;
   margin-top: 30px;
-  border: 1px solid black;
   padding: 17px;
   margin-bottom: 0;
 }
 
 footer a {
+  color: aliceblue;
   text-decoration: none;
-  border: 1px solid blue;
-  padding: 10px;
+  font-size: 20px;
+  background-color: #0c77ba9d;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 25px;
+}
+
+footer a:hover {
+  background-color: #122a388c;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 @-webkit-keyframes go-back {

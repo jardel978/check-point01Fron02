@@ -29,32 +29,16 @@ body
     font-size: 15px;
     background: linear-gradient(120deg, #031E6B, #4DE4CF);
 }
-.logo__menu {
-    flex: 50%;
-    padding: 10px;
-    text-align: justify;
-}
 
-.logo__menu img {
-    width: 27%;
-}
-
-.menu {
+main {
+    height: 100vh;
     display: flex;
-    flex: 50%;
-    justify-content: space-around;
-}
-
-
-.menu li a {
-    color: #031e6d;
-    font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-container
 {
-    // width:65vw;
-    margin:300px auto;
     display: flex;
     gap: 60px;
     flex-wrap: wrap;
