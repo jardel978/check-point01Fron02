@@ -42,12 +42,12 @@ function criarCard(titulo, descricao, link, id) {
     novoArtigo.innerHTML =
         `
             <dir data-click id="${id}" class="section__card__lixeira">                   
-                <img class="section__card__lixeira__img1" src="./midias/lixeira-de-reciclagem-tampa.png" alt="">                    
-                <img class="section__card__lixeira__img2" src="./midias/lixeira-de-reciclagem-corpo.png" alt="">                
+                <img loading= "lazy" class="section__card__lixeira__img1" src="./midias/lixeira-de-reciclagem-tampa.png" alt="">                    
+                <img loading= "lazy" class="section__card__lixeira__img2" src="./midias/lixeira-de-reciclagem-corpo.png" alt="">                
             </dir>
             <!-- img card -->
             <div id="imagem-card">
-                <img class="imagem-card" src="${link}" alt="imagem">
+                <img loading= "lazy" class="imagem-card" src="${link}" alt="imagem">
             </div>
             <div class="conteudo-card">
                 <!-- título -->
