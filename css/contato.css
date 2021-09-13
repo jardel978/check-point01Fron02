@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+.flex__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.192);
+  padding: 20px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.menu a {
+  color: aliceblue;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.menu a:hover {
+  background-color: #122a388c;
+  border-radius: 7px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  font-size: 15px;
+  background: #0e4c70;
+  background: radial-gradient(circle, #0e4c70 0%, #136596 0%, rgba(9, 55, 79, 0.994835) 64%, #083147 75%, #05212f 88%, rgba(0, 8, 9, 0.936012) 97%);
+  color: aliceblue;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  -webkit-animation: mostrar-form 0.7s ease-in-out;
+          animation: mostrar-form 0.7s ease-in-out;
+}
+
+main h1 {
+  margin-top: 50px;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.contato__container__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.555);
+  padding: 10px;
+  height: 450px;
+  border-radius: 0 40px 40px;
+}
+
+.contato__container__form input {
+  width: 280px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(99, 134, 161, 0.486);
+  color: #bdd4e7;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+.contato__container__form input:focus {
+  background-color: rgba(61, 105, 141, 0.486);
+  border-bottom: solid #22c1c3 1px;
+  outline: 0;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.contato__container__form textarea {
+  max-width: 260px;
+  height: 110px;
+  padding: 5px;
+  border-radius: 7px;
+  background-color: rgba(99, 134, 161, 0.486);
+  color: #bdd4e7;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+.contato__container__form textarea:focus {
+  background-color: rgba(61, 105, 141, 0.486);
+  border-bottom: solid #22c1c3 1px;
+  outline: 0;
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.contato__container__form button {
+  margin-top: 20px;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  background: #22c1c3;
+  background: linear-gradient(61deg, #22c1c3 0%, rgba(19, 114, 146, 0.950018) 48%, rgba(4, 35, 96, 0.961222) 100%);
+  border: none;
+  color: #dae1e9;
+  font-size: 17px;
+}
+
+.contato__container__form button:hover {
+  -webkit-animation: btn-neon 1s ease-in-out infinite alternate;
+          animation: btn-neon 1s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.contato__container__form label {
+  padding: 2px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  margin-bottom: 3px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  bottom: 0;
+}
+
+@-webkit-keyframes btn-neon {
+  from {
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+            box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+  }
+}
+
+@keyframes btn-neon {
+  from {
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+            box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+  }
+}
+
+@-webkit-keyframes mostrar-form {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes mostrar-form {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+/*# sourceMappingURL=contato.css.map */

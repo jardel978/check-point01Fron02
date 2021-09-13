@@ -128,10 +128,6 @@ main {
             cursor: pointer;
             animation: card-neon 1s ease-in-out infinite alternate;
         }
-
-        img {
-            border-radius: 10px;
-        }
     }
     
 
@@ -143,11 +139,14 @@ main {
     }
 }
 .section__card__lixeira--disable {
-
     align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
     width: 80px;
     height: 80px;
-    padding: 10px;
+    padding-right: 1px;
+    padding-top: 15px;
     &:hover {
         animation: lixeira  0.1s ease;
         animation-iteration-count: 2;       
@@ -155,19 +154,20 @@ main {
 }
 
 .section__card__lixeira__img--disable {
-    position: absolute;
+    position: relative;
     width: 30px;
-    opacity: 0.4;
-    background-color: rgba(162, 163, 163, 0.514);
-    padding: 2px;
-    border-radius: 7px;
+    opacity: 0.5;
 }
 
 .section__card__lixeira {
     align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
     width: 80px;
     height: 80px;
-    padding: 7px;
+    padding-right: 1px;
+    padding-top: 15px;
 
     &:hover {
         transform: scale(1.1);
@@ -177,29 +177,27 @@ main {
 }
 
 .section__card__lixeira__img1 {
-    position: absolute;
+    position: relative;
     width: 30px;
-    background-color: rgba(255, 85, 99, 0.719);
-    padding: 2px;
     &:hover {
-        margin-bottom: 3px;
+        margin-bottom: 5px;
         transition: ease 0.3s;
         cursor: pointer;
     }
 }
 
 .section__card__lixeira__img2 {
-    position: absolute;
+    position: relative;
     width: 30px;
-    padding: 2px;
     &:hover {
-        margin-top: 3px;
+        margin-top: 5px;
         transition: ease 0.3s;
         cursor: pointer;
     }
 }
 
 .imagem-card {
+    border-radius: 10px;
     max-width: 220px;
     max-height:170px;
     width: auto;
@@ -311,7 +309,7 @@ footer {
     100% {transform: translateX(0);} 
 }
 
-@-webkit-keyframes card-neon {
+@keyframes card-neon {
   from {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
   }

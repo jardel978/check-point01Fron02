@@ -27,7 +27,6 @@ lixeiras.forEach(el => el.addEventListener("click", (e) => {//para excluir cards
         meusCards.splice(indexCard, 1);
         indexCards.splice(indexCard, 1);//removendo um elemento do indexCards para manter o sincronismo com o index de meusCards
         location.reload();
-
     } else
         e.stopPropagation();
 
@@ -42,12 +41,12 @@ function criarCard(titulo, descricao, link, id) {
     novoArtigo.innerHTML =
         `
             <dir data-click id="${id}" class="section__card__lixeira">                   
-                <img loading= "lazy" class="section__card__lixeira__img1" src="./midias/lixeira-de-reciclagem-tampa.png" alt="">                    
-                <img loading= "lazy" class="section__card__lixeira__img2" src="./midias/lixeira-de-reciclagem-corpo.png" alt="">                
+                <img loading= "lazy" class="section__card__lixeira__img1" src="./midias/lixeira-de-reciclagem-tampa02.png" alt="lixeira para excluir card">                    
+                <img loading= "lazy" class="section__card__lixeira__img2" src="./midias/lixeira-de-reciclagem-corpo02.png" alt="lixeira para excluir card">                
             </dir>
             <!-- img card -->
             <div id="imagem-card">
-                <img loading= "lazy" class="imagem-card" src="${link}" alt="imagem">
+                <img loading= "lazy" class="imagem-card" src="${link}" alt="imagem do card">
             </div>
             <div class="conteudo-card">
                 <!-- título -->

@@ -190,10 +190,6 @@ main h1 {
           animation: card-neon 1s ease-in-out infinite alternate;
 }
 
-.section__cards article img {
-  border-radius: 10px;
-}
-
 .section__cards p {
   border-bottom: 1px solid #0C78BA;
   border-radius: 10px;
@@ -204,9 +200,20 @@ main h1 {
 .section__card__lixeira--disable {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 80px;
   height: 80px;
-  padding: 10px;
+  padding-right: 1px;
+  padding-top: 15px;
 }
 
 .section__card__lixeira--disable:hover {
@@ -217,20 +224,28 @@ main h1 {
 }
 
 .section__card__lixeira__img--disable {
-  position: absolute;
+  position: relative;
   width: 30px;
-  opacity: 0.4;
-  background-color: rgba(162, 163, 163, 0.514);
-  padding: 2px;
-  border-radius: 7px;
+  opacity: 0.5;
 }
 
 .section__card__lixeira {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 80px;
   height: 80px;
-  padding: 7px;
+  padding-right: 1px;
+  padding-top: 15px;
 }
 
 .section__card__lixeira:hover {
@@ -242,33 +257,31 @@ main h1 {
 }
 
 .section__card__lixeira__img1 {
-  position: absolute;
+  position: relative;
   width: 30px;
-  background-color: rgba(255, 85, 99, 0.719);
-  padding: 2px;
 }
 
 .section__card__lixeira__img1:hover {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
   cursor: pointer;
 }
 
 .section__card__lixeira__img2 {
-  position: absolute;
+  position: relative;
   width: 30px;
-  padding: 2px;
 }
 
 .section__card__lixeira__img2:hover {
-  margin-top: 3px;
+  margin-top: 5px;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
   cursor: pointer;
 }
 
 .imagem-card {
+  border-radius: 10px;
   max-width: 220px;
   max-height: 170px;
   width: auto;
@@ -454,6 +467,17 @@ footer a:hover {
 }
 
 @-webkit-keyframes card-neon {
+  from {
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+            box-shadow: 0 0 0px rgba(255, 255, 255, 0.644), 0 0 5px rgba(255, 255, 255, 0.644), 0 0 10px rgba(255, 255, 255, 0.644), 0 0 13px #228dff8f, 0 0 27px #228dff8f, 0 0 35px #228dff8f, 0 0 45px #228dff8f, 0 0 60px #228dff8f;
+  }
+}
+
+@keyframes card-neon {
   from {
     -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.644), 0 0 15px rgba(255, 255, 255, 0.644), 0 0 25px rgba(255, 255, 255, 0.644), 0 0 35px #228dff8f, 0 0 65px #228dff8f, 0 0 75px #228dff8f, 0 0 85px #228dff8f, 0 0 95px #228dff8f;
